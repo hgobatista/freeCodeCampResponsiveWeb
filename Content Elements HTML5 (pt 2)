@@ -1,0 +1,91 @@
+------ Wrap radio buttons in a <fieldset>
+       element for better accessibility
+       
+The next form topic covers the accessibility of
+radio buttons. Each choice is given a |label|
+with a |for| attribute tying to the |id| of the
+corresponding item as covered in the last
+challenge. Since radio buttons often come in a
+group where the user must choose one, there's
+a way to semantically show the choices are part
+of a set.
+
+The |fieldset| tag surrounds the entire
+grouping of radio buttons to achieve this. It
+often uses a |legend| tag to provide a
+description for the grouping, which screen
+readers read for each choice in the |fieldset|
+element.
+
+The |fieldset| wrapper and |legend| tag are
+not necessary when the choices are self-
+explanatory, like a gender selection. Using a
+|label| with the |for| attribute for each radio
+button is sufficient.
+
+Here's an example:
+-----------------------
+<form>
+  <fieldset>
+    <legend>Choose one of these three items></legend>
+    <input id="one" type="radio" name="items" value="one">
+    <label for="one">Choice One</label><br>
+    <input id="two" type="radio" name="items" value="two">
+    <label for="two">Choice two</label><br>
+    <input id="three" type="radio" name="items" value="three>
+    <label for="three">Choice three</label>
+  </fieldset>
+</form>
+-----------------------
+_____________________________________________________
+
+------ Add an accessible date picker
+
+Forms often include the |input| field, which can
+be used to create several different form
+controls. Tje |type| attribute on this element
+indicates what king of |input| element will be
+created.
+
+You may have noticed the |text| and |submit|
+input types in prior challenges, and HTML5
+introduced an option to specify a |date| field.
+Depending on browser support, a date picker
+shows up in the |input| field when it's in focus,
+which makes filling in a form easier for all users.
+
+For older browsers, the type will default to
+|text|, so it helps to show users the expected
+date format in the |label| or |placeholder| text
+just in case.
+
+Here's an example:
+-----------------------
+<label for="input1">Enter a date></label>
+<input type="date" id="input1" name="input1">
+-----------------------
+_____________________________________________________
+
+------ Standardize times with the HTML5 
+       attribute datetime <time datetime="">
+
+Continuing with the date theme, HTML5 also
+introduced the |time| element along with a
+|datetime| attribute to standardize times. The
+|time| element is an inline element that can wrap a
+date or time on a page. A |datetime| attribute holds
+a valid format of that date. This is the value
+accessed by assistive devices. It helps avoid
+confusion by stating a stardardzed version of a
+time, even if it's informally or colloquialli written in
+the text.
+
+Here's an example:
+-----------------------
+<p>Master Camper Cat officiated the cage match between Goro
+and Scorpion <time datetime="2013-02-13'>last wednesday</time>,
+wich ended in a draw.
+</p>
+-----------------------
+
+
